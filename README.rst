@@ -14,7 +14,8 @@ Synthesizing Tasks
 Overview
 ========
 
-[overview]
+In this assignment, we'll look at two practical examples of using lists to
+achieve a real-world objective.
 
 Instructions
 ============
@@ -44,44 +45,132 @@ Synthesizing Tasks
 Task 01
 -------
 
-nested lists, families celebrating in park, how many total people and how
-many picnic areas
+You've been tasked with organizing a party. There are a large number of
+families attending with each family to receive its own table. A table may only
+seat six so families in excess of six members will need to be split across
+multiple tables but **will not** be combined with members of other families.
+
+Create a function that can analyze arbitrary lists of families and return
+a total headcount for your caterer as well as a total number of tables
+needed.
 
 Specifications
 ^^^^^^^^^^^^^^
 
-[step-by-step directions of the task]
+1.  Create a module named ``task_01.py``
+
+2.  Create a function called ``get_party_stats()`` that takes two parameters:
+
+    1.  ``families``, a list of families which are, themselves, lists of
+        members, eg:
+
+        .. code:: python
+
+            [['Angel', 'Michael', 'Samuel'], ['Jennifer', 'James']]
+
+    2.  ``table_size``, the maximum number of seats at each table, defaults
+        to six (6)
+
+4.  Loop through your list with the ``for`` loop and count not only the
+    total number of attendees but *also* the number of tables necessary to
+    seat all the guests.
+
+    Remember that, at this party, families are being anti-social and will not
+    be seated with other families.
+
+5.  Return the results in a tuple:
+
+    1.  total number of guests
+
+    2.  total number of tables
+
+.. hint::
+
+    If you're stumped on how to count the number of tables because Python's
+    integer division can't acount for fractions, consider the following:
+
+    .. code:: python
+
+        -(-x // y)
+
+    The floor division operator ``//`` always floors a division but if we
+    invert the numerator prior to division then invert it again after floor
+    division we've effectively created a pseudo-ceiling division without having
+    to resort to using the ``math`` module!
 
 Examples
 ^^^^^^^^
 
-[examples of the work in-progress]
-
 .. code:: pycon
 
-    >>>
+    >>> get_party_stats(['Jan'], ['Jen', 'Jess'], ['Jem', 'Jack', 'Janis']])
+    (6, 3)
+
+    >>> get_party_stats(['Jan'], ['Jen', 'Jess'], ['Jem', 'Jack', 'Janis']], 2)
+    (6, 4)
+
+.. hint::
+
+    Use our simulator in the data module to try random party sizes with your
+    code.
+
+    .. code:: pycon
+
+        >>> import data
+        >>> data.get_party_list()
 
 Task 02
 -------
 
-email engine, use .format and list data to create a list of strings like
-'Hello Sally. I look forward to your appt on dt'
+Imagine that you've been tasked with setting up appointments with a large
+client base. You have a system that capture the client name and the time of
+their appointments but you'd like to send a reminder e-mail blast to each
+client.
 
-Need raw data of names in the dictionary-style struct.
+For our final exercise this week, we'll be preparing some data as though we
+were about to send automated e-mails. With lists and a basic ``for`` loop,
+there's little we can't accomplish!
 
 Specifications
 ^^^^^^^^^^^^^^
 
-[step-by-step directions of the task]
+1.  Create a new module named ``task_02.py``
+
+2.  Create a function named ``prepare_email()`` that takes one argument:
+
+    1.  ``appointments``, A list of two-item tuples with the client's name
+        and their appointment time as members:
+
+        .. code:: python::
+
+        [('Wiley', 'Monday, March 16, 2015 05:16PM'), ...]
+
+3.  Use a ``for`` loop and ``.format()`` to create a new list with just the
+    client's email body. The body of the email should use the following
+    formatting string:
+
+    .. code:: python::
+
+        'Dear {},\nI look forward to meeting with you on {}.\nBest,\nMe'
+
+    Return your new list.
+
+.. warning::
+
+    You'll be tempted to re-define your above format string inside your ``for``
+    loop but that would be a violation of our DRY principle since it would
+    continually be re-created. Define the base string outside the loop and
+    just use it as a variable inside when you create your output.
 
 Examples
 ^^^^^^^^
 
-[examples of the work in-progress]
-
 .. code:: pycon
 
-    >>>
+    >>> prepare_email([('Jen', '2015'), ('Max', 'March 3')]
+    ['Dear Jen,\nI look forward to meeting with you on 2015.\nBest,\nMe',
+    'Dear Max,\nI look forward to meeting you on March 3.\nBest\nMe']
+
 Executing Tests
 ===============
 
