@@ -8,7 +8,7 @@ Synthesizing Tasks
 :College: CUNY School of Professional Studies
 :Course-Name: Software Application Programming I
 :Course-Code: IS 210
-:Points: ##
+:Points: 10
 :Due-Date: YYYY-MM-DDTHH:mm:ss
 
 Overview
@@ -41,10 +41,11 @@ files that you create!
 Synthesizing Tasks
 ==================
 
-Task ##
+Task 01
 -------
 
-[description of task]
+nested lists, families celebrating in park, how many total people and how
+many picnic areas
 
 Specifications
 ^^^^^^^^^^^^^^
@@ -60,6 +61,27 @@ Examples
 
     >>>
 
+Task 02
+-------
+
+email engine, use .format and list data to create a list of strings like
+'Hello Sally. I look forward to your appt on dt'
+
+Need raw data of names in the dictionary-style struct.
+
+Specifications
+^^^^^^^^^^^^^^
+
+[step-by-step directions of the task]
+
+Examples
+^^^^^^^^
+
+[examples of the work in-progress]
+
+.. code:: pycon
+
+    >>>
 Executing Tests
 ===============
 
