@@ -47,8 +47,9 @@ Task 01
 
 You've been tasked with organizing a party. There are a large number of
 families attending with each family to receive its own table. A table may only
-seat six so families in excess of six members will need to be split across
-multiple tables but **will not** be combined with members of other families.
+seat a set number of people, so families in excess of that numer will need to
+be split across multiple tables but **will not** be combined with members of
+other families.
 
 Create a function that can analyze arbitrary lists of families and return
 a total headcount for your caterer as well as a total number of tables
