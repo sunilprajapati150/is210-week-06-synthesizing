@@ -47,7 +47,7 @@ Task 01
 
 You've been tasked with organizing a party. There are a large number of
 families attending with each family to receive its own table. A table may only
-seat a set number of people, so families in excess of that numer will need to
+seat a set number of people, so families in excess of that number will need to
 be split across multiple tables but **will not** be combined with members of
 other families.
 
@@ -88,7 +88,7 @@ Specifications
 .. hint::
 
     If you're stumped on how to count the number of tables because Python's
-    integer division can't acount for fractions, consider the following:
+    integer division can't account for fractions, consider the following:
 
     .. code:: python
 
