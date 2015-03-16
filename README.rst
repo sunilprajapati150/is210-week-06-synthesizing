@@ -98,6 +98,11 @@ Specifications
     invert the numerator prior to division then invert it again after floor
     division we've effectively created a pseudo-ceiling division without having
     to resort to using the ``math`` module!
+    
+.. warning::
+
+    Neither of these tasks require a counter to use it. Counters are not an
+    inherent part of loops.
 
 Examples
 ^^^^^^^^
