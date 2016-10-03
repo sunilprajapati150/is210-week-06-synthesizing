@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """a really good docstring"""
 
-def get_party_status(families,table_size = 6):
+def get_party_stats(families,table_size = 6):
 
     guests = 0
     tables = 0
